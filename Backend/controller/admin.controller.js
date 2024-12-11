@@ -23,7 +23,7 @@ export async function addBook(req, res) {
         const newBook = new Book(req.body);
 
         const savedBook = await newBook.save();
-        res.json(savedBook, { success: true });
+        res.json({ success: true });
     } catch (err) {
         console.error('Error creating book:', err);
         res.status(500).json({ error: 'Internal Server Error' });

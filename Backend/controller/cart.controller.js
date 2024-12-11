@@ -2,11 +2,6 @@ import Cart from "../model/cart_model.js";
 
 export const addCart = async (req, res) => {
     try {
-        // const name = req.query.name;
-        // const price = req.query.price;
-        // const image = req.query.image;
-        // const title = req.query.title;
-        // const category = req.query.category;
 
         const { image, name, price, category, title } = req.query;
         const quantity = 1;

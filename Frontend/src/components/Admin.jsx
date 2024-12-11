@@ -80,7 +80,7 @@ const AdminDashboard = () => {
                 name="name"
                 value={bookData.name}
                 onChange={handleInputChange}
-                placeholder="Book Name"
+                placeholder="Author"
                 className="p-2 border border-gray-300 rounded mr-2"
                 required
             />
