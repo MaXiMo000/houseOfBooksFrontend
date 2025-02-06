@@ -10,7 +10,7 @@ const Category = () => {
     const handleCat = async (e) => {
         e.preventDefault();
         try {
-        const response = await axios.get(`http://localhost:4001/category`, {
+        const response = await axios.get(`https://houseofbooksbackend.onrender.com/category`, {
             params: { category: categoryQuery },
         });
         setResults(response.data);

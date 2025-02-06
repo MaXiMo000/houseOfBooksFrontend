@@ -14,7 +14,7 @@ function Cards({ item }) {
 
     try {
       // Send item data to the backend using query params (you could also send it as a POST request)
-      const response = await axios.get('http://localhost:4001/cart/add', {
+      const response = await axios.get('https://houseofbooksbackend.onrender.com/cart/add', {
         params: {
           image: item.image,
           name: item.name,

@@ -9,7 +9,7 @@ const Search = () => {
     const handleSearch = async (e) => {
         e.preventDefault();
         try {
-        const response = await axios.get(`http://localhost:4001/search`, {
+        const response = await axios.get(`https://houseofbooksbackend.onrender.com/search`, {
             params: { name: searchQuery },
         });
         setResults(response.data);

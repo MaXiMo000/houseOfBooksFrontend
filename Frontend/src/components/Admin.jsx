@@ -20,7 +20,7 @@ const AdminDashboard = () => {
 
     const fetchBooks = async () => {
         try {
-        const response = await axios.get('http://localhost:4001/books');
+        const response = await axios.get('https://houseofbooksbackend.onrender.com/books');
         setBooks(response.data);
         } catch (error) {
         console.error('Error fetching books:', error);
@@ -35,7 +35,7 @@ const AdminDashboard = () => {
 
     const addBook = async () => {
         try {
-        const response = await axios.post('http://localhost:4001/books/add', bookData);
+        const response = await axios.post('https://houseofbooksbackend.onrender.com/books/add', bookData);
         if (response.data.success) {
             setMessage('Book added successfully!');
             setBookData({ name: '', price: '', category: '', image: '', title: '' });
@@ -51,7 +51,7 @@ const AdminDashboard = () => {
 
     const deleteBook = async (id) => {
         try {
-        const response = await axios.delete(`http://localhost:4001/books/${id}`);
+        const response = await axios.delete(`https://houseofbooksbackend.onrender.com/books/${id}`);
         if (response.data.success) {
             setMessage('Book deleted successfully!');
             fetchBooks();
